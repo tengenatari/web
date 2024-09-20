@@ -1,0 +1,17 @@
+.titlename{
+    font-size: 25px;
+    color:maroon;
+    text-align: center;
+}
+body{
+    background-color:dimgrey;
+}
+body p{
+    color:tomato;
+}
+img {
+    border-color: rgba(143, 18, 18, 0.521);
+    border-width: 100px;
+    border-radius: 7%;
+    float: inline-end;
+}

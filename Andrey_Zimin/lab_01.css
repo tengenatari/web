@@ -1,0 +1,16 @@
+header{
+    display: flex;
+}
+header div{
+    display: flex;
+}
+.tile{
+    background-color: whitesmoke;
+    width: 250px;
+    height: 250px;
+}
+.tile_image{
+    width: 50%;
+    
+
+}
