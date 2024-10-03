@@ -5,73 +5,61 @@ $clay: #5c6b73
 $black: #253237
 
 body
-    background-color: $snow
     display: flex
     flex-direction: column
     align-items: center
     justify-items: center
 .cont
+    background-color: $snow
     width: 1000px
     display: flex
     justify-items: center
     align-items: center
     flex-direction: column
-    
 
 header
     background-color: $ice
     border: $clay solid 2px
     width: 100%
-    display: grid
-    grid-template-columns: 1fr 1fr 1fr
     display: flex
     justify-items: center
     align-items: center
     position: relative
-
     .header-item
         width: 100%
         height: 100%
-
         .header-left
             display: flex
             justify-content: start
-            margin-left: 30px   
-
+            margin-left: 45px   
+            .fav
+                height: 60px
+                .fav_image
+                    height: 60px
+            .title
+                color: $clay
         .header-right
             display: flex
             justify-content: end
-            margin-right: 30px
-
-.fav
-    border: $gray solid 2px
-    height: 60px
-
-.fav_image
-    height: 60px
-.title
-    margin-left: 20px 
-    color: $clay
-
-.button-upload
-    border: $clay
-    background-color: $clay
-    color: $ice
-    border-radius: 10px
-    height: 35px
-    width: 75px
-
+            margin-right: 45px
+            .button-upload
+                border: $clay
+                background-color: $clay
+                color: $ice
+                border-radius: 10px
+                height: 35px
+                width: 75px
 .grid
     display: grid
     grid-gap: 15px
     grid-template-columns: repeat(auto-fit, 300px)
     width: 100% 
     justify-items: center
+    justify-content: center
 
 $n: 5
 $tile_bg_colors: #8ab5be, #f5d088, #dfa589, #f5edd5, #889094
 $tile_border_colors: #006073, #EE9B00, #BB3E03, #E9D8A6, #001219
-
 
 @for $i from 1 through 100
   .tile:nth-child(#{$i})
@@ -90,13 +78,35 @@ $tile_border_colors: #006073, #EE9B00, #BB3E03, #E9D8A6, #001219
         
 
 .tile
-    width: 70%
+    width: 80%
     padding: 15px
     margin: 20px
     border-radius: 10px
     position: relative
-
     .tile_image
         width: 100%
 
 
+footer
+    background-color: $ice
+    width: 100%
+    display: flex
+    justify-items: center
+    align-items: center
+    position: relative
+    .footer-item
+        width: 100%
+        height: 100%
+        .footer-left
+            display: flex
+            justify-content: start
+            margin-left: 45px   
+            .author
+                color: $clay
+        .footer-right
+            display: flex
+            justify-content: end
+            margin-right: 45px
+            .icon_image
+                height: 50px
+                

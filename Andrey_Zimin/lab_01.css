@@ -1,5 +1,4 @@
 body {
-  background-color: #c2dfe3;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,6 +6,7 @@ body {
 }
 
 .cont {
+  background-color: #c2dfe3;
   width: 1000px;
   display: flex;
   justify-items: center;
@@ -18,8 +18,6 @@ header {
   background-color: #e0fbfc;
   border: #5c6b73 solid 2px;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   display: flex;
   justify-items: center;
   align-items: center;
@@ -32,29 +30,23 @@ header .header-item {
 header .header-item .header-left {
   display: flex;
   justify-content: start;
-  margin-left: 30px;
+  margin-left: 45px;
+}
+header .header-item .header-left .fav {
+  height: 60px;
+}
+header .header-item .header-left .fav .fav_image {
+  height: 60px;
+}
+header .header-item .header-left .title {
+  color: #5c6b73;
 }
 header .header-item .header-right {
   display: flex;
   justify-content: end;
-  margin-right: 30px;
+  margin-right: 45px;
 }
-
-.fav {
-  border: #9db4c0 solid 2px;
-  height: 60px;
-}
-
-.fav_image {
-  height: 60px;
-}
-
-.title {
-  margin-left: 20px;
-  color: #5c6b73;
-}
-
-.button-upload {
+header .header-item .header-right .button-upload {
   border: #5c6b73;
   background-color: #5c6b73;
   color: #e0fbfc;
@@ -69,6 +61,7 @@ header .header-item .header-right {
   grid-template-columns: repeat(auto-fit, 300px);
   width: 100%;
   justify-items: center;
+  justify-content: center;
 }
 
 .tile:nth-child(1) {
@@ -1672,7 +1665,7 @@ header .header-item .header-right {
 }
 
 .tile {
-  width: 70%;
+  width: 80%;
   padding: 15px;
   margin: 20px;
   border-radius: 10px;
@@ -1680,4 +1673,33 @@ header .header-item .header-right {
 }
 .tile .tile_image {
   width: 100%;
+}
+
+footer {
+  background-color: #e0fbfc;
+  width: 100%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+}
+footer .footer-item {
+  width: 100%;
+  height: 100%;
+}
+footer .footer-item .footer-left {
+  display: flex;
+  justify-content: start;
+  margin-left: 45px;
+}
+footer .footer-item .footer-left .author {
+  color: #5c6b73;
+}
+footer .footer-item .footer-right {
+  display: flex;
+  justify-content: end;
+  margin-right: 45px;
+}
+footer .footer-item .footer-right .icon_image {
+  height: 50px;
 }/*# sourceMappingURL=lab_01.css.map */
