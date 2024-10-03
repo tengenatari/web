@@ -2,20 +2,29 @@ $ice: #e0fbfc
 $snow: #c2dfe3
 $gray: #9db4c0
 $clay: #5c6b73
-$black: #253237
+$black: black
+
+$n: 5
+$tile_bg_colors: #8ab5be, #f5d088, #dfa589, #f5edd5, #889094
+$tile_border_colors: #006073, #EE9B00, #BB3E03, #E9D8A6, #001219
+
+@mixin tile-style($bg-color, $border_colors, $text-color)
+    background-color: $bg-color
+    color: $text-color
+    border: $border_colors solid 2px
+    box-shadow: 5px 5px 5px $border_colors
+
+@mixin region-style($bg-color, $border_colors, $text-color)
+    background-color: $bg-color
+    color: $text-color
+    border: $border_colors solid 2px
 
 body
     display: flex
-    flex-direction: column
-    align-items: center
-    justify-items: center
-.cont
     background-color: $snow
-    width: 1000px
-    display: flex
-    justify-items: center
-    align-items: center
     flex-direction: column
+    align-items: center
+    justify-items: center
 
 header
     background-color: $ice
@@ -30,65 +39,61 @@ header
         height: 100%
         .header-left
             display: flex
-            justify-content: start
-            margin-left: 45px   
+            justify-content: end
             .fav
-                height: 60px
-                .fav_image
-                    height: 60px
-            .title
-                color: $clay
+                margin-right: 10px
+                .fav-image
+                    height: 70px
+            .header-text
+                margin-right: 143px
+                color: $black
         .header-right
             display: flex
-            justify-content: end
-            margin-right: 45px
+            justify-content: start
+            margin-left: 380px
             .button-upload
                 border: $clay
                 background-color: $clay
-                color: $ice
+                color: white
                 border-radius: 10px
                 height: 35px
                 width: 75px
-.grid
-    display: grid
-    grid-gap: 15px
-    grid-template-columns: repeat(auto-fit, 300px)
-    width: 100% 
-    justify-items: center
-    justify-content: center
-
-$n: 5
-$tile_bg_colors: #8ab5be, #f5d088, #dfa589, #f5edd5, #889094
-$tile_border_colors: #006073, #EE9B00, #BB3E03, #E9D8A6, #001219
-
+.cont
+    width: 1000px
+    display: flex
+    align-items: start
+    flex-direction: column
+    .header-text
+        margin-left: 48px
+        color: $black
+    .grid
+        display: grid
+        grid-gap: 15px
+        grid-template-columns: repeat(auto-fit, 300px)
+        width: 100% 
+        justify-items: center
+        justify-content: center
 @for $i from 1 through 100
-  .tile:nth-child(#{$i})
-    background-color: nth($tile_bg_colors, (($i - 1)% $n+1))
-    border: nth($tile_border_colors, (($i - 1)% $n+1)) solid 2px
-    box-shadow: 5px 5px 5px nth($tile_border_colors, (($i - 1)% $n+1))
-    .region
-        background-color: nth($tile_bg_colors, (($i - 1)% $n+1))
-        border: nth($tile_border_colors, (($i - 1)% $n+1)) solid 2px
-        border-radius: 3px
-        position: absolute
-        top: 10px
-        left: 10px
-        font-size: 1.2rem
-        padding: 2px
-        
-
-.tile
-    width: 80%
-    padding: 15px
-    margin: 20px
-    border-radius: 10px
-    position: relative
-    .tile_image
-        width: 100%
-
-
+        .tile:nth-child(#{$i})
+            @include tile-style(nth($tile_bg_colors, (($i - 1)% $n+1)), nth($tile_border_colors, (($i - 1)% $n+1)), $black)
+            width: 80%
+            padding: 15px
+            margin: 20px
+            border-radius: 10px
+            position: relative
+            .tile-image
+                width: 100%
+            .region
+                @include region-style(nth($tile_bg_colors, (($i - 1)% $n+1)), nth($tile_border_colors, (($i - 1)% $n+1)), $black)
+                position: absolute
+                top: 10px
+                left: 10px
+                font-size: 1.2rem
+                padding: 2px
+                border-radius: 3px
+                
 footer
-    background-color: $ice
+    border-top: 2px solid $black
     width: 100%
     display: flex
     justify-items: center
@@ -99,14 +104,20 @@ footer
         height: 100%
         .footer-left
             display: flex
-            justify-content: start
-            margin-left: 45px   
+            justify-content: end  
             .author
-                color: $clay
+                margin-right: 352px 
+                color: $black
         .footer-right
             display: flex
-            justify-content: end
-            margin-right: 45px
-            .icon_image
-                height: 50px
+            justify-content: start
+            align-content: middle
+            .icons
+                display: flex
+                vertical-align: middle
+                height: 100%
+                margin-left: 271px
+                .icon-image
+                    padding: 5px
+                    height: 50px
                 
