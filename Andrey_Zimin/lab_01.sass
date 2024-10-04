@@ -73,9 +73,9 @@ header
         width: 100% 
         justify-items: center
         justify-content: center
-@for $i from 1 through 100
-        .tile:nth-child(#{$i})
-            @include tile-style(nth($tile_bg_colors, (($i - 1)% $n+1)), nth($tile_border_colors, (($i - 1)% $n+1)), $black)
+@for $i from 1 through 5
+        .tile:nth-child(5n+#{$i})
+            @include tile-style(nth($tile_bg_colors, $i), nth($tile_border_colors, $i), $black)
             width: 80%
             padding: 15px
             margin: 20px
@@ -84,7 +84,7 @@ header
             .tile-image
                 width: 100%
             .region
-                @include region-style(nth($tile_bg_colors, (($i - 1)% $n+1)), nth($tile_border_colors, (($i - 1)% $n+1)), $black)
+                @include region-style(nth($tile_bg_colors, $i), nth($tile_border_colors, $i), $black)
                 position: absolute
                 top: 10px
                 left: 10px
