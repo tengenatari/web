@@ -1,0 +1,209 @@
+body {
+  display: flex;
+  background-color: #c2dfe3;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+header {
+  background-color: #e0fbfc;
+  border: #5c6b73 solid 2px;
+  width: 100%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+}
+header .header-item {
+  width: 100%;
+  height: 100%;
+}
+header .header-item .header-left {
+  display: flex;
+  justify-content: end;
+}
+header .header-item .header-left .fav {
+  margin-right: 10px;
+}
+header .header-item .header-left .fav .fav-image {
+  height: 70px;
+}
+header .header-item .header-left .header-text {
+  margin-right: 143px;
+  color: black;
+}
+header .header-item .header-right {
+  display: flex;
+  justify-content: start;
+  margin-left: 380px;
+}
+header .header-item .header-right .button-upload {
+  border: #5c6b73;
+  background-color: #5c6b73;
+  color: white;
+  border-radius: 10px;
+  height: 35px;
+  width: 75px;
+}
+
+.cont {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+.cont .header-text {
+  margin-left: 48px;
+  color: black;
+}
+.cont .tiles {
+  justify-items: center;
+  justify-content: center;
+}
+
+.tile:nth-child(5n+1) {
+  background-color: #8ab5be;
+  color: black;
+  border: #006073 solid 2px;
+  box-shadow: 5px 5px 5px #006073;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+.tile:nth-child(5n+1) .region {
+  background-color: #8ab5be;
+  color: black;
+  border: #006073 solid 2px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.2rem;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.tile:nth-child(5n+2) {
+  background-color: #f5d088;
+  color: black;
+  border: #EE9B00 solid 2px;
+  box-shadow: 5px 5px 5px #EE9B00;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+.tile:nth-child(5n+2) .region {
+  background-color: #f5d088;
+  color: black;
+  border: #EE9B00 solid 2px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.2rem;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.tile:nth-child(5n+3) {
+  background-color: #dfa589;
+  color: black;
+  border: #BB3E03 solid 2px;
+  box-shadow: 5px 5px 5px #BB3E03;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+.tile:nth-child(5n+3) .region {
+  background-color: #dfa589;
+  color: black;
+  border: #BB3E03 solid 2px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.2rem;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.tile:nth-child(5n+4) {
+  background-color: #f5edd5;
+  color: black;
+  border: #E9D8A6 solid 2px;
+  box-shadow: 5px 5px 5px #E9D8A6;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+.tile:nth-child(5n+4) .region {
+  background-color: #f5edd5;
+  color: black;
+  border: #E9D8A6 solid 2px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.2rem;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.tile:nth-child(5n+5) {
+  background-color: #889094;
+  color: black;
+  border: #001219 solid 2px;
+  box-shadow: 5px 5px 5px #001219;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+.tile:nth-child(5n+5) .region {
+  background-color: #889094;
+  color: black;
+  border: #001219 solid 2px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.2rem;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+footer {
+  border-top: 2px solid black;
+  width: 100%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+}
+footer .footer-item {
+  width: 100%;
+  height: 100%;
+}
+footer .footer-item .footer-left {
+  display: flex;
+  justify-content: end;
+}
+footer .footer-item .footer-left .author {
+  margin-right: 352px;
+  color: black;
+}
+footer .footer-item .footer-right {
+  display: flex;
+  justify-content: start;
+  align-content: middle;
+}
+footer .footer-item .footer-right .icons {
+  display: flex;
+  vertical-align: middle;
+  height: 100%;
+  margin-left: 271px;
+}
+footer .footer-item .footer-right .icons .icon-image {
+  padding: 5px;
+  height: 50px;
+}/*# sourceMappingURL=lab_02.css.map */
