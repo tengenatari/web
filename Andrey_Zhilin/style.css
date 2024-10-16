@@ -11852,12 +11852,15 @@ body {
 }
 
 .cont {
-  width: 1000px;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-items: center;
 }
 
 .header {
+  max-width: 1000px;
   border: #FA8094 solid 2px;
   background-color: #fff;
   width: 100%;
@@ -11872,21 +11875,7 @@ body {
   justify-content: end;
 }
 
-.header-item-first {
-  width: 100%;
-  display: flex;
-  justify-content: end;
-}
-.header-item-first .item-second {
-  width: 100%;
-  display: flex;
-  justify-items: start;
-}
-.header-item-first .item-second .item {
-  margin-left: 20px;
-  color: #FA8094;
-}
-.header-item-first img {
+.logo {
   max-height: 50px;
   max-width: 50px;
   overflow: hidden;
