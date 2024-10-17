@@ -11906,11 +11906,11 @@ body {
 }
 
 .card:nth-child(3n+2) {
-  box-shadow: 4px -3px 3px #FA8094;
+  box-shadow: 2px -3px 3px #FA8094;
 }
 
 .card:nth-child(3n+3) {
-  box-shadow: 6px -3px 3px #FA8094;
+  box-shadow: 2px -3px 3px #FA8094;
 }
 
 img {
@@ -11922,6 +11922,7 @@ img {
 
 .card-my {
   width: 18rem;
+  box-shadow: 2px -3px 3px #FA8094;
   display: flex;
   background-color: #fff;
   padding: 20px;
@@ -11929,10 +11930,6 @@ img {
   background-color: #ffc8dd;
   border: #ff8fab solid 2px;
   border-radius: 5px;
-  padding: 20px;
-  margin: 20px;
-  justify-content: end;
-  flex-direction: column;
   position: relative;
 }
 
@@ -11993,26 +11990,6 @@ img {
   border: #ff8fab solid 2px;
   border-radius: 5px;
   color: #fb6f92;
-}
-
-.card:nth-child(5n+1) {
-  box-shadow: 1px -3px 3px #ffafcd;
-}
-
-.card:nth-child(5n+2) {
-  box-shadow: 2px -3px 3px #ff95bd;
-}
-
-.card:nth-child(5n+3) {
-  box-shadow: 3px -3px 3px #ff7cae;
-}
-
-.card:nth-child(5n+4) {
-  box-shadow: 4px -3px 3px #ff629e;
-}
-
-.card:nth-child(5n+5) {
-  box-shadow: 5px -3px 3px #ff498e;
 }
 
 .data {
