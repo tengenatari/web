@@ -14,53 +14,124 @@
                     <h2 class="header-text">A Song of Ice and Fire</h2>
                 </div>    
                 <div class="header-right">
-                    <button type="button" class="btn btn-primary">upload</button>
+                    <button id="loadButton" class="btn btn-primary">upload</button>
+                    <div id="toast" class="toast notify">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 512 512" class="loading-image"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M304 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm0 416a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM48 304a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm464-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM142.9 437A48 48 0 1 0 75 369.1 48 48 0 1 0 142.9 437zm0-294.2A48 48 0 1 0 75 75a48 48 0 1 0 67.9 67.9zM369.1 437A48 48 0 1 0 437 369.1 48 48 0 1 0 369.1 437z"/></svg>
+    
+                        <div class="toast-body">
+                            This button is not available yet :(
+                        </div>
+                        <button id="closeToastButton" class="btn close" aria-label="Close">
+                            &times;
+                        </button>
+                    </div>
                 </div>
             </div>
         </nav>
-        
+        <div class="modal fade card-info" id="modalScrollable" tabindex="-1" role="dialog" aria-labelledby="modalScrollableTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header m-head">
+                        <div class="m-head-item">
+                            <h5 class="modal-title card-title" id="modalScrollableTitle">Modal title</h5>
+                            <button type="button" id="buttonCloseModal" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                        <img src="" alt="modal-image" id="modalImage" class="card-img-top m-image">
+                    </div>
+                    <div class="modal-body m-body" >
+                        <span id="modalText"></span>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>        
         <div class="cont">
             <div class="container text-center">
                 <h1 class="header-text">Great Houses</h1>
             </div>
             <div class="container text-center">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-5 tiles">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-5 row-cols-extralarge-5 tiles">
                     <div class="col card tile">
                         <img class="card-img-top" alt="House Arryn" src="https://awoiaf.westeros.org/images/b/b4/House_Arryn.svg">
                         <div class="region">Vale of Arryn</div>
                         <h2 class="card-title">Arryn</h2>
-                        <p class="card-text">The principal noble house in the Vale of Arryn. Their main seat is the Eyrie, which is considered impregnable. House Arryn has at least one other holding, their winter castle at the Gates of the Moon, which was once their main seat. And their words are "As High as Honor".</p>
+                        <p class="card-text">The principal noble house in the Vale of Arryn. Their main seat is the Eyrie, which is considered impregnable. House Arryn has at least one other holding, their winter castle at the Gates of the Moon, which was once their main seat. And their words are "As High as Honor".</p>  
+                        <div class="my-card-footer">
+                            <button id="infoArrynButton" type="button" class="btn info-button" data-bs-toggle="modal" data-bs-target="#modalScrollable" 
+                            data-title="Arryn" data-info="The Arryns are considered to come from the oldest and purest line of Andal nobility, which they say reaches back to Andalos and possibly Hugor of the Hill.
+
+                            When King Robar II Royce began to unite the First Men and defeat some of the petty Andal kings during the Andal invasion, the Andals of the Vale united behind Ser Artys Arryn, the Falcon Knight, a native Valeman esteemed amongst his peers as the finest warrior of his day. Robar was slain in the Battle of the Seven Stars, possibly by Artys, and the First Men houses who remained bent the knee and swore fealty to Artys Arryn, the First of His Name, new-crowned King of Mountain and Vale. From that day, the Vale became known as the Vale of Arryn.[8] Songs of the Vale conflate Artys with the legendary Winged Knight, who is said to have slain the Griffin King atop the Giant's Lance.[1][7] The First Men who did not accept Artys as their king were forced into the Mountains of the Moon, becoming the Vale mountain clans.
+                            
+                            The Arryns initially lived at the Gates of the Moon, but over generations they constructed the Eyrie. They often used the Eyrie as a summer pleasure palace, descending to the Gates of the Moon before winter made the Eyrie inaccessible."
+                            data-image="https://awoiaf.westeros.org/images/b/b4/House_Arryn.svg">info</button>
+                        </div>
+                        
                     </div>
                     <div class="col card tile">
                         <img class="card-img-top" alt="House Baratheon" src="https://awoiaf.westeros.org/images/2/2d/House_Baratheon.svg">
                         <div class="region">Stormlands</div>
                         <h2 class="card-title">Baratheon</h2>
                         <p class="card-text">The principal house in the stormlands, which they rule as Lords Paramount of the Stormlands. Their seat, Storm's End, is an ancient castle raised by the Storm Kings from the now-extinct House Durrandon. Ans their words are "Ours is the Fury". </p>
+                        <div class="my-card-footer text-center">
+                            <button id="infoBaratheonButton" type="button" class="btn info-button" data-bs-toggle="modal" data-bs-target="#modalScrollable" 
+                            data-title="Baratheon" data-info="House Baratheon is the youngest of the Great Houses of Westeros. It was created when Orys Baratheon, one of Aegon I Targaryen's generals, his closest companion, and his rumored bastard half-brother, took Argella Durrandon, the only daughter of Argilac Durrandon, the last Storm King, to wife. Orys took the sigil and words of House Durrandon for his own and became the first Lord of Storm's End. Through the female line, House Baratheon descents from King Durran Godsgrief, who founded the kingdom of the Storm Kings during the Age of Heroes.
+
+                            Rogar Baratheon, the lord of Storm's End at the time of the reigns of kings Maegor I Targaryen and Jaehaerys I Targaryen, served as Hand of the King and Protector of the Realm during the minority of Jaehaerys I. A grandson of Lord Orys, Rogar would marry Queen Dowager Alyssa Velaryon and father two children, Boremund and Jocelyn. Boremund would succeed his father, while Jocelyn married Prince Aemon Targaryen.
+                            
+                            During the Dance of the Dragons, Lord Borros Baratheon sided the House with Aegon II Targaryen and the greens, despite his late father, Lord Boremund's support of the blacks and relation to Rhaenys Targaryen (through his sister, Jocelyn Baratheon). Prince Aemond Targaryen was sent to Storm's End, to get Lord Borros to side with Aegon II, by offering a betrothal between himself and one of Lord Borros' four daughters. It is unknown whether this marriage occurred prior to Aemond's death the next year. Lord Borros was reluctant to face the dragons during the war, but marched with his army towards the end of the war, seizing King's Landing for Aegon II during the Moon of the Three Kings, restoring the city to order. He was promised that his eldest daughter would marry King Aegon II, who had lost both his Queen, Helaena Targaryen, as well as both of his sons, during the war. Borros then marched against the approaching riverlander army, and fought in the Battle of the Kingsroad, where he was killed by young Lord Kermit Tully."
+                            data-image="https://awoiaf.westeros.org/images/2/2d/House_Baratheon.svg">info</button>
+                        </div>
                     </div>
                     <div class="col card tile">
                         <img class="card-img-top" alt="House Lannister" src="https://awoiaf.westeros.org/images/d/d5/House_Lannister.svg">
                         <div class="region">Westerlands</div>
                         <h2 class="card-title">Lannister</h2>
                         <p class="card-text">The principal house of the westerlands. Their seat is Casterly Rock, though another branch exists in nearby Lannisport. And their official motto is "Hear Me Roar!" However, their unofficial motto, equally well known, is "A Lannister always pays his debts."</p>
+                        <div class="my-card-footer text-center">
+                            <button id="infoLannisterButton" type="button" class="btn info-button" data-bs-toggle="modal" data-bs-target="#modalScrollable" 
+                            data-title="Lannister" data-info="The Lannisters suddenly appear as First Men in historical records of the Age of Heroes, ruling large portions of the westerlands from Casterly Rock just as the Casterlys vanish from the chronicles. They claim descent from Lann the Clever, the legendary figure who tricked the Casterlys from Casterly Rock.
+
+                            According to a semi-canon source, members of lesser branches of the family left Casterly Rock and developed a nearby village into the city of Lannisport, forming House Lannister of Lannisport. Meanwhile, the Lannisters of Casterly Rock grew to become Kings of the Rock. The first known King of the Rock was Loreon I Lannister, although Lann the Clever has posthumously been called by the same title. Loreon gained House Reyne as his vassals and defeated the Hooded King, Morgon Banefort."
+                            data-image="https://awoiaf.westeros.org/images/d/d5/House_Lannister.svg">info</button>
+                        </div>
                     </div>
                     <div class="col card tile">
                         <img class="card-img-top" alt="House Stark" src="https://awoiaf.westeros.org/images/7/7e/House_Stark.svg">
                         <div class="region">North</div>
                         <h2 class="card-title">Stark</h2>
                         <p class="card-text">The principal noble house of the north. In days of old they ruled as Kings of Winter, but since Aegon's Conquest they have been Wardens of the North and ruled as Lords of Winterfell. Their seat, Winterfell, is an ancient castle. And their words are "Winter Is Coming".</p>
+                        <div class="my-card-footer text-center">
+                            <button id="infoStarkButton" type="button" class="btn info-button" data-bs-toggle="modal" data-bs-target="#modalScrollable" 
+                            data-title="Stark" data-info="House Stark traditionally buries deceased members of their family in the crypts below Winterfell. The Kings of Winter and Lords of Winterfell are given a statue of their likeness, sitting by their tomb, whereas other family members normally do not get one. Exceptions include Brandon and Lyanna Stark, who were given statues by their brother, Lord Eddard Stark, and Artos Stark. The statues of the kings and lords have stone wolves by their feet and have swords placed upon their lap, which are said to keep the spirits of the dead at rest, locked within their tombs.
+
+                            House Stark traditionally follows the old gods. Following the marriage of Eddard to Lady Catelyn Tully, a follower of the Faith of the Seven, a small sept was constructed at Winterfell.
+                            
+                            The Starks have traditionally been friends of the Night's Watch. The four youngest men to have served as Lord Commander, including Osric Stark, were brothers, sons, or bastards of Kings in the North. "
+                            data-image="https://awoiaf.westeros.org/images/7/7e/House_Stark.svg">info</button>
+                        </div>
                     </div>
                     <div class="col card tile">
                         <img class="card-img-top" alt="House Targaryen" src="https://awoiaf.westeros.org/images/1/1e/House_Targaryen.svg">
                         <div class="region">Crownlands</div>
                         <h2 class="card-title">Targaryen</h2>
                         <p class="card-text">The noble family of Valyrian descent who once ruled the Seven Kingdoms of Westeros. The house words are "Fire and Blood". The only family of dragonlords who survived the Doom of Valyria, the Targaryens left the Valyrian Freehold twelve years before the Doom.</p>
+                        <div class="my-card-footer text-center">
+                            <button id="infoTargaryenButton" type="button" class="btn info-button" data-bs-toggle="modal" data-bs-target="#modalScrollable" 
+                            data-title="Targaryen" data-info="House Targaryen's &#10;&#13; words are Fire and Blood. Their sigil is a three-headed dragon breathing flames, red on black. The three-headed dragon represents Aegon the Conqueror and his two sisters, Rhaenys and Visenya.[3] King Aegon II Targaryen used a golden dragon to rally his supporters during the Dance of the Dragons. Some younger sons of the house used variations of the standard sigil. Before his own reign, Maekar I Targaryen used the three-headed dragon, quartered, while his son, Prince Aerion Targaryen, changed the colors of the three heads—one orange, one yellow, one red—while the flames they breathed had a sheen of gold leaf.
+
+                            In line with the sigil colors, most Targaryens used armor black in color. For instance, Prince Aemond Targaryen had night-black armor chased with gold, Prince Valarr Targaryen wore armor black as night in the tourney at Ashford Meadow,[4] and Prince Rhaegar Targaryen had the three-headed dragon wrought in rubies on his black breast plate.
+                            
+                            Although the Targaryen kings took their seat at King's Landing, the place where Aegon and his army first landed in Westeros and made their first fort, replaced by the Red Keep later on, their earlier seat of Dragonstone remained in their possession as well.[22] It eventually became the traditional seat of the heir-apparent to the throne, who was known as the Prince of Dragonstone (or Princess of Dragonstone, in a few occasions). in 188 AC, the Targaryens eventually built a third seat, Summerhall, which was granted to several younger sons who were granted the title Prince of Summerhall."
+                            data-image="https://awoiaf.westeros.org/images/1/1e/House_Targaryen.svg">info</button>
+                        </div>
                     </div>        
                 </div>
             </div>
         </div>
         <footer>
             <div class="footer-left">
-                <p class="author">Зимин Андрей</p>
+                <button class="btn btn-light" id="author" data-bs-toggle="popover" data-bs-title="Hey! I'm author of this site" data-bs-content="And I am a 3rd year student at Tyumen State University" >Andrey Zimin</button>
             </div>
             <div class="footer-right">
                 <div class="icons">

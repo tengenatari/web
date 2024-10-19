@@ -21,12 +21,44 @@ $tile_border_colors: #006073, #EE9B00, #BB3E03, #E9D8A6, #001219
     color: $text-color
     border: $border_colors solid 2px
 
+@mixin button-style($bg-border_color)
+    border: $bg-border_color solid 2px
+
+@media (min-width: 2000px)
+    .row-cols-extralarge-5 > *
+        flex: 0 0 18%
+
 body
     display: flex
     background-color: $snow
     flex-direction: column
     align-items: center
     justify-items: center
+
+.m-head
+    width: 100%
+    display: flex
+    flex-direction: column
+    .m-head-item
+        padding: 10px
+        width: 100%
+        display: flex
+        justify-items: space-between
+        justify-content: space-between
+    .m-image
+        max-width: 100%
+        height: auto
+
+.loading-image
+    padding: 5px
+    animation: spin 2s linear infinite
+
+
+@keyframes spin 
+    0% 
+        transform: rotate(0deg) 
+    100%
+        transform: rotate(360deg)
 
 
 nav
@@ -52,8 +84,16 @@ nav
             border-radius: 10px
             height: 35px
             width: 75px
+        .notify
+            position: absolute
+            top: 20px 
+            right: 20px
+            flex-direction: row
+            justify-items: space-between
+            justify-content: space-between
 .cont
     width: 100%
+    min-height: 770px
     display: flex
     align-items: start
     flex-direction: column
@@ -77,10 +117,26 @@ nav
                 font-size: 1.2rem
                 padding: 2px
                 border-radius: 3px
-                
+            .card-text
+                margin-bottom: 40px
+            .my-card-footer
+                position: absolute
+                bottom: 5px
+                width: 95%
+                margin-left: auto
+                margin-right: auto
+                left: 0
+                right: 0
+                text-align: center
+                .info-button
+                    width: 100%
+                    @include button-style(nth($tile_border_colors, $i))
+
 footer
+    flex-shrink: 0
     border-top: 2px solid $black
     width: 100%
+    height: 70px
     display: flex
     justify-items: space-between
     justify-content: space-between
@@ -90,8 +146,6 @@ footer
         display: inline-flex
         justify-content: center
         padding: 10px
-        height: 100%
-        weight: 100%
         .author
             color: $black
             margin-top: auto
@@ -103,7 +157,6 @@ footer
         .icons
             display: flex
             vertical-align: middle
-            height: 100%
             .icon-image
                 padding: 5px
                 height: 50px

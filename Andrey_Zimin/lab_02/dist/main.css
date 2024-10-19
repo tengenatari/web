@@ -11968,6 +11968,11 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+@media (min-width: 2000px) {
+  .row-cols-extralarge-5 > * {
+    flex: 0 0 18%;
+  }
+}
 body {
   display: flex;
   background-color: #c2dfe3;
@@ -11976,6 +11981,36 @@ body {
   justify-items: center;
 }
 
+.m-head {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.m-head .m-head-item {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-items: space-between;
+  justify-content: space-between;
+}
+.m-head .m-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.loading-image {
+  padding: 5px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 nav {
   background-color: #e0fbfc;
   border: #5c6b73 solid 2px;
@@ -12004,9 +12039,18 @@ nav .header-right .button-upload {
   height: 35px;
   width: 75px;
 }
+nav .header-right .notify {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  flex-direction: row;
+  justify-items: space-between;
+  justify-content: space-between;
+}
 
 .cont {
   width: 100%;
+  min-height: 770px;
   display: flex;
   align-items: start;
   flex-direction: column;
@@ -12040,6 +12084,23 @@ nav .header-right .button-upload {
   padding: 2px;
   border-radius: 3px;
 }
+.tile:nth-child(5n+1) .card-text {
+  margin-bottom: 40px;
+}
+.tile:nth-child(5n+1) .my-card-footer {
+  position: absolute;
+  bottom: 5px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.tile:nth-child(5n+1) .my-card-footer .info-button {
+  width: 100%;
+  border: #006073 solid 2px;
+}
 
 .tile:nth-child(5n+2) {
   background-color: #f5d088;
@@ -12061,6 +12122,23 @@ nav .header-right .button-upload {
   font-size: 1.2rem;
   padding: 2px;
   border-radius: 3px;
+}
+.tile:nth-child(5n+2) .card-text {
+  margin-bottom: 40px;
+}
+.tile:nth-child(5n+2) .my-card-footer {
+  position: absolute;
+  bottom: 5px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.tile:nth-child(5n+2) .my-card-footer .info-button {
+  width: 100%;
+  border: #EE9B00 solid 2px;
 }
 
 .tile:nth-child(5n+3) {
@@ -12084,6 +12162,23 @@ nav .header-right .button-upload {
   padding: 2px;
   border-radius: 3px;
 }
+.tile:nth-child(5n+3) .card-text {
+  margin-bottom: 40px;
+}
+.tile:nth-child(5n+3) .my-card-footer {
+  position: absolute;
+  bottom: 5px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.tile:nth-child(5n+3) .my-card-footer .info-button {
+  width: 100%;
+  border: #BB3E03 solid 2px;
+}
 
 .tile:nth-child(5n+4) {
   background-color: #f5edd5;
@@ -12105,6 +12200,23 @@ nav .header-right .button-upload {
   font-size: 1.2rem;
   padding: 2px;
   border-radius: 3px;
+}
+.tile:nth-child(5n+4) .card-text {
+  margin-bottom: 40px;
+}
+.tile:nth-child(5n+4) .my-card-footer {
+  position: absolute;
+  bottom: 5px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.tile:nth-child(5n+4) .my-card-footer .info-button {
+  width: 100%;
+  border: #E9D8A6 solid 2px;
 }
 
 .tile:nth-child(5n+5) {
@@ -12128,10 +12240,29 @@ nav .header-right .button-upload {
   padding: 2px;
   border-radius: 3px;
 }
+.tile:nth-child(5n+5) .card-text {
+  margin-bottom: 40px;
+}
+.tile:nth-child(5n+5) .my-card-footer {
+  position: absolute;
+  bottom: 5px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.tile:nth-child(5n+5) .my-card-footer .info-button {
+  width: 100%;
+  border: #001219 solid 2px;
+}
 
 footer {
+  flex-shrink: 0;
   border-top: 2px solid black;
   width: 100%;
+  height: 70px;
   display: flex;
   justify-items: space-between;
   justify-content: space-between;
@@ -12142,8 +12273,6 @@ footer .footer-left {
   display: inline-flex;
   justify-content: center;
   padding: 10px;
-  height: 100%;
-  weight: 100%;
 }
 footer .footer-left .author {
   color: black;
@@ -12158,7 +12287,6 @@ footer .footer-right {
 footer .footer-right .icons {
   display: flex;
   vertical-align: middle;
-  height: 100%;
 }
 footer .footer-right .icons .icon-image {
   padding: 5px;
