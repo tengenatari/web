@@ -28,15 +28,11 @@ body
     align-items: center
     justify-items: center
 
-header
+
+nav
     background-color: $ice
     border: $clay solid 2px
-    width: 100%
-    display: flex
-    justify-items: space-between
-    justify-content: space-between
-    align-items: center
-    position: relative
+    width: 90%
     .header-left
         display: flex
         align-items: center
@@ -90,6 +86,16 @@ footer
     justify-content: space-between
     align-items: center
     position: relative
+    .footer-left
+        display: inline-flex
+        justify-content: center
+        padding: 10px
+        height: 100%
+        weight: 100%
+        .author
+            color: $black
+            margin-top: auto
+            margin-bottom: auto
     .footer-right
         display: flex
         padding: 10px
@@ -101,15 +107,3 @@ footer
             .icon-image
                 padding: 5px
                 height: 50px
-.footer-left
-        display: inline-flex
-        justify-content: center
-        padding: 10px
-        height: 100%
-        weight: 100%
-        border: 1px solid
-        .author
-            border: 1px solid
-            color: $black
-            margin-top: auto
-            margin-bottom: auto
