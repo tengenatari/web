@@ -11875,16 +11875,23 @@ body {
   border-bottom-right-radius: 5px;
 }
 
-.button-cont {
-  display: flex;
-  height: 100%;
-  align-items: center;
-  margin-right: 4px;
-}
-
 .button-upload {
   height: 75%;
   padding: 5px 5px;
+  background-color: #ffc8dd;
+  border: #ff8fab solid 2px;
+  border-radius: 5px;
+  color: #fb6f92;
+}
+
+.button-upload:hover {
+  background-color: #FA8094;
+  border: #FA8094 solid 2px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.button-upload:target {
   background-color: #FA8094;
   border: #FA8094 solid 2px;
   border-radius: 5px;
@@ -11971,15 +11978,6 @@ img {
   height: 100%;
   align-items: center;
   margin-right: 4px;
-}
-
-.button-upload {
-  height: 75%;
-  padding: 5px 5px;
-  background-color: #ffc8dd;
-  border: #ff8fab solid 2px;
-  border-radius: 5px;
-  color: #fb6f92;
 }
 
 .data {

@@ -1,7 +1,6 @@
 @import "/node_modules/bootstrap/scss/bootstrap.scss"
 
 
-
 $pink: #ffc8dd
 $dark_pink: #ff8fab
 $purple: #cdb4db
@@ -9,6 +8,9 @@ $blue: #bde0fe
 $dark_blue: #a2d2ff
 $black: black
 $darker_pink: #fb6f92
+
+
+
 @mixin box($color, $i)
     box-shadow: #{$i}px -3px 3px darken($color, $i*5%)
 
@@ -38,20 +40,26 @@ body
     border-bottom-left-radius: 5px
     border-bottom-right-radius: 5px
 
-.button-cont
-    display: flex
-    height: 100%
-    align-items: center
-    margin-right: 4px
 
 .button-upload
     height: 75%
     padding: 5px 5px
+    background-color: $pink
+    border: $dark_pink  solid 2px
+    border-radius: 5px
+    color: $darker_pink
+
+.button-upload:hover
     background-color: #FA8094
     border: #FA8094  solid 2px
     border-radius: 5px
     color: #fff
 
+.button-upload:target
+    background-color: #FA8094
+    border: #FA8094  solid 2px
+    border-radius: 5px
+    color: #fff
 
 @for $i from 1 through 3
     .card:nth-child(3n + #{$i})
@@ -125,13 +133,6 @@ img
     align-items: center
     margin-right: 4px
 
-.button-upload
-    height: 75%
-    padding: 5px 5px
-    background-color: $pink
-    border: $dark_pink  solid 2px
-    border-radius: 5px
-    color: $darker_pink
 
 
 
